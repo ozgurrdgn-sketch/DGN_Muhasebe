@@ -1,0 +1,50 @@
+# ============================================================
+# DGN Denizcilik AI — .gitignore
+# ============================================================
+
+# --- GÜVENLİK: API Anahtarları ve Gizli Dosyalar ---
+.streamlit/secrets.toml
+service_account.json
+
+# --- Veritabanı ---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Fatura Arşivi (Yerel Dosyalar) ---
+fatura_arsivi/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# --- Sanal Ortam ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- IDE ve Editör ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- Pytest / Test ---
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Ortam Değişkenleri ---
+.env
+.env.local
