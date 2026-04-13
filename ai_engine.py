@@ -98,10 +98,10 @@ class InvoiceSchema(BaseModel):
 # =============================================================================
 
 def _get_api_key() -> str:
-    """
-    API anahtarını .streamlit/secrets.toml'dan okur.
-    Bulunamazsa kullanıcıyı bilgilendirip uygulamayı durdurur.
-    """
+    import os
+    key = os.environ.get("GEMINI_API_KEY")
+    if key:
+        return key
     try:
         return st.secrets["GEMINI_API_KEY"]
     except (KeyError, FileNotFoundError):
